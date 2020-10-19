@@ -38,10 +38,17 @@ When I visit "/"
   - [x]    Then I should be on page "/foods"
 
 In "/foods"
-- [ ] Then I should see a total of the number of items returned by the search.
-- [ ] Then I should see a list of ten foods that contain the ingredient "sweet potatoes"
-  - [ ] And for each of the foods I should see:
+- [x] Then I should see a total of the number of items returned by the search.
+- [x] Then I should see a list of ten foods that contain the ingredient "sweet potatoes"
+  - [x] And for each of the foods I should see:
   - The food's GTIN/UPC code
   - The food's description
   - The food's Brand Owner
   - The food's ingredients
+
+  ### Refactor to Facade pattern
+  - [] Controller
+  - [] Facade
+  - [] Service
+  - [] Poro
+  - [] View using objects
