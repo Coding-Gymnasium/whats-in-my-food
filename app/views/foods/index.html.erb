@@ -1,0 +1,28 @@
+<center>
+  <h1>Results</h1>
+  <p>Total Results: <%= @results[:totalHits] %></p>
+  <%count = 0%>
+  <% until count == 10 do %>
+    <% @foods.first(10).each do |food| %>
+      <div class="food">
+
+          <div class="code">
+            <strong>GTIN/UPC code:</strong> <%= food[:gtinUpc] %></p>
+          </div>
+          <div class="description">
+            <strong>Description:</strong> <%= food[:description] %></p>
+          </div>
+          <div class="brand">
+            <strong>Brand Owner:</strong> <%= food[:brandOwner] %></p>
+          </div>
+          <div class="ingredients">
+            <strong>Ingredients:</strong> <%= food[:ingredients] %></p>
+          </div>
+
+        <hr>
+      </div>
+      <% count += 1 %>
+      <% end %>
+  <% break if count = 10 %>
+  <%end%>
+</center>
