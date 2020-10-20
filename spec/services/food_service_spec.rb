@@ -9,7 +9,7 @@ RSpec.describe FoodService do
         expect(foods_list.keys).to eq([:totalHits, :foods])
         expect(foods_list[:totalHits]).to eq(38680)
         expect(foods_list[:foods]).to be_an(Array)
-        expect(foods_list[:foods].count).to eq(50)
+        expect(foods_list[:foods].count).to eq(10)
       end
     end
   end
