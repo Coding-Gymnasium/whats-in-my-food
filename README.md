@@ -22,9 +22,9 @@ The documentation for the API can be found here: https://fdc.nal.usda.gov/api-gu
 Make sure you take the time to read the documentation carefully. Remember, we want to get a list of foods that contain an ingredient.
 
 - [x] Complete the following user story. 
-- [ ] Be sure to TDD all of your work. 
-- [ ] Commit your work every 15 minutes. 
-- [ ] Start with a big controller, and refactor into the Facade Design Pattern and Service Design Pattern.
+- [x] Be sure to TDD all of your work. 
+- [x] Commit your work every 15 minutes. 
+- [x] Start with a big controller, and refactor into the Facade Design Pattern and Service Design Pattern.
 
 :arrow_right: PUSH YOUR CODE TO GITHUB WHEN YOU ARE 100% finished, or 10:50am, whichever is FIRST!! :arrow_left:
 DM your repo URL to Dione and I. Do not make a pull request to Turing.
@@ -51,4 +51,4 @@ In "/foods"
   - [x] Facade
   - [x] Service
   - [x] Poro
-  - [] View using objects
+  - [ ] View using objects
