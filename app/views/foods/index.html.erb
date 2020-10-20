@@ -1,6 +1,6 @@
 <center>
   <h1>Results</h1>
-  <p>Total Results: <%= @results[:totalHits] %></p>
+  <p>Total Results: <%= @results %></p>
   <%count = 0%>
   <% until count == 10 do %>
     <% @foods.first(10).each do |food| %>
