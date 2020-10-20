@@ -22,7 +22,7 @@ RSpec.describe "Foods Seach Results Index Page" do
             expect(page).to have_content('The Pictsweet Company')
           end
           within(first('.ingredients')) do
-            expect(page).to have_content('The Pictsweet Company')
+            expect(page).to have_content('SWEET POTATOES')
           end      
         end
       end
