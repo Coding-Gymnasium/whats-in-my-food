@@ -48,7 +48,7 @@ In "/foods"
 
   ### Refactor to Facade pattern
   - [] Controller
-  - [] Facade
+  - [x] Facade
   - [] Service
   - [] Poro
   - [] View using objects
