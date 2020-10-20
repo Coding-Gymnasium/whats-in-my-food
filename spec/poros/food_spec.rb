@@ -1,20 +1,37 @@
 require 'rails_helper'
 RSpec.describe Food do
-  it "has attributes" do
-    VCR.use_cassette('usda_search') do
-      data = FoodsFacade.search_foods('Sweet Potatoes')[:foods].first
-      ## data.keys => [:fdcId,:description, :dataType, :gtinUpc, :publishedDate, :brandOwner, :ingredients, :foodNutrients, :allHighlightFields, :score]
-      # data[:fdcId] => 600987
-      food = Food.new(data)
-      # binding.pry
-      # yet food.fdcId => gives an array of values. Why???
-      # food.fdcId.class => Array. ???
-      # expect(food.fdcId).to be_an(Integer) 
-      expect(food.description).to be_a(String)
-      expect(food.brandOwner).to be_a(String)
-      expect(food.ingredients).to be_a(String)
-      expect(food.foodNutrients).to be_an(Array)
-      expect(food.foodNutrients.first).to be_a(Hash)
+    it "has attributes" do
+        data =   {
+            "fdcId": 478350,
+            "description": "SWEET POTATO",
+            "dataType": "Branded",
+            "gtinUpc": "085239389508",
+            "publishedDate": "2019-04-01",
+            "brandOwner": "Target Stores",
+            "ingredients": "WATER, WHEAT FLOUR, SWEET POTATO PUREE",
+            "foodNutrients": [
+                {
+                    "nutrientId": 1087,
+                    "nutrientName": "Calcium, Ca",
+                    "nutrientNumber": "301",
+                    "unitName": "MG",
+                    "derivationCode": "LCCD",
+                    "derivationDescription": "Calculated from a daily value percentage per serving size measure",
+                    "value": 17.00000000
+                }
+            ],
+            "allHighlightFields": "<b>Ingredients</b>: WATER, WHEAT FLOUR, <em>SWEET</em> <em>POTATO</em> PUREE, <em>POTATO</em> STARCH, <em>POTATO</em> FLAKES (<em>POTATOES</em>, MONO",
+            "score": 975.51294
+        }
+        food = Food.new(data)
+
+        expect(food.description).to be_a(String)
+        expect(food.description).to eq("SWEET POTATO")
+        expect(food.gtinUpc).to be_a(String)
+        expect(food.gtinUpc).to eq("085239389508")
+        expect(food.brandOwner).to be_a(String)
+        expect(food.brandOwner).to eq("Target Stores")
+        expect(food.ingredients).to be_a(String)
+        expect(food.ingredients).to eq("WATER, WHEAT FLOUR, SWEET POTATO PUREE")
     end
-  end
 end
