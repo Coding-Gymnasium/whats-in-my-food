@@ -47,8 +47,8 @@ In "/foods"
   - The food's ingredients
 
   ### Refactor to Facade pattern
-  - [] Controller
+  - [x] Controller
   - [x] Facade
-  - [] Service
-  - [] Poro
+  - [x] Service
+  - [x] Poro
   - [] View using objects
