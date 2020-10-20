@@ -51,4 +51,4 @@ In "/foods"
   - [x] Facade
   - [x] Service
   - [x] Poro
-  - [ ] View using objects
+  - [x] View using objects
